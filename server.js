@@ -39,16 +39,16 @@ app.get("/start", (req, res) => {
 });
 
 //启动nezha
-app.get("/nezha", (req, res) => {
-  let cmdStr = "/bin/bash nezha.sh server.abc.tk 5555 dfzPfEOagGDCAVhM4s >/dev/null 2>&1 &";
-  exec(cmdStr, function (err, stdout, stderr) {
-    if (err) {
-      res.send("哪吒客户端部署错误：" + err);
-    } else {
-      res.send("哪吒客户端执行结果：" + "启动成功!");
-    }
-  });
-});
+//app.get("/nezha", (req, res) => {
+//  let cmdStr = "/bin/bash nezha.sh server.abc.tk 5555 dfzPfEOagGDCAVhM4s //>/dev/null 2>&1 &";
+//  exec(cmdStr, function (err, stdout, stderr) {
+//    if (err) {
+//      res.send("哪吒客户端部署错误：" + err);
+//    } else {
+//     res.send("哪吒客户端执行结果：" + "启动成功!");
+//    }
+//  });
+//});
 
 //获取系统版本、内存信息
 app.get("/info", (req, res) => {
